@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class Practice2 {
 
-    static Scanner scanner = new Scanner(System.in);
+//    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+
 
         // 1
 //        System.out.print("Введите размер массива: ");
@@ -314,11 +315,11 @@ public class Practice2 {
 //                array[i][j] = array[i - 1][j - 1] + array[i - 1][j];
 //            }
 //        }
-//        for (int[] ints : array) {
+//        for (int[] into : array) {
 //            for (int j = 0; j < copy; j++) {
 //                System.out.print("  ");
 //            }
-//            for (int anInt : ints) {
+//            for (int anInt : into) {
 //                if (anInt < 10) {
 //                    System.out.print(anInt + "    ");
 //                } else if (anInt < 100) {
@@ -332,18 +333,28 @@ public class Practice2 {
 //            }
 //            System.out.println();
 //            copy--;
-        int[] array = {1, 2, 3, 4, 7};
-        System.out.print(amount(0, array));
 //        }
+        calculator();
     }
 
-    public static int amount(int num, int[] array){
-        if(num == array.length - 1){
-            return array[num];
+    public static int getResult (int i, int[] array){
+        if(i == array.length - 1){
+            return array[i];
         }
-        return array[num] + amount(num + 1, array);
+        return array[i] + getResult(i + 1, array);
     }
 
+    // 10
+    public static void lift (int i){
+        if(i == 0){
+            return;
+        }
+        System.out.println("Вы на " + i + " этаже!");
+        lift(i - 1);
+        System.out.print(i + " ");
+    }
+
+    // 9
     public static int count (int[] v){
         int count = 0;
         for (int j : v) {
@@ -357,6 +368,7 @@ public class Practice2 {
 
     // 8
     public static void calculator(){
+        Scanner scanner = new Scanner(System.in);
         double a = input();
         double b = input();
         System.out.print("""
