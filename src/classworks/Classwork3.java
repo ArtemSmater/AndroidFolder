@@ -6,11 +6,7 @@ import java.util.Scanner;
 public class Classwork3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Внесены изменения");
-        System.out.println("Внесены изменения");
-        System.out.println("Внесены изменения");
-
-
+        System.out.println("Домашнее задание");
         // 2
 //        int[] array = new int[10];
 //        for (int i = 0; i < array.length; i++) {
