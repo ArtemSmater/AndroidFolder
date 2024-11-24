@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Practice2 {
 
-//    static Scanner scanner = new Scanner(System.in);
+    //    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
 
@@ -131,8 +131,8 @@ public class Practice2 {
 //            System.out.println();
 //        }
 //        System.out.println();
-//        for (int[] ints : array1) {
-//            for (int anInt : ints) {
+//        for (int[] into : array1) {
+//            for (int anInt : into) {
 //                System.out.print(anInt * anInt + "\t");
 //            }
 //            System.out.println();
@@ -334,28 +334,74 @@ public class Practice2 {
 //            System.out.println();
 //            copy--;
 //        }
-        calculator();
+
+//        String line = "Строка";
+//        String result = "";
+//        for (int i = line.length() - 1; i >= 0; i--) {
+//            result += line.charAt(i);
+//        }
+//        System.out.println(result);
+//
+//        String str = "Строка...";
+//        for (int i = 0; i < str.length(); i++) {
+//            System.out.print(str.charAt(str.length() - 1 - i));
+//        }
+
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Введите строку: ");
+//        String result = scanner.nextLine();
+//        String start = result.substring(0, result.indexOf("о") + 1);
+//        String line = result.substring(result.indexOf("о") + 1, result.lastIndexOf("о"));
+//        String end = result.substring(result.lastIndexOf("о"));
+//        char[] array = new char[line.length()];
+//        for (int i = 0; i < line.length(); i++) {
+//            array[i] = line.charAt(i);
+//        }
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] == 'о') {
+//                array[i] = 'О';
+//            }
+//        }
+//        String endLine = String.valueOf(array);
+//        System.out.println(start + endLine + end);
+
+//        char[] array = new char['я' - 'а' + 1];
+//        System.out.println(array.length);
+//        for (int i = 'а'; i < 'я'; i++) {
+//            array[i] = (char) i;
+//        }
+
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        System.out.print("Введите символ: ");
+        String symbol = scanner.nextLine();
+        String[] result = new String[line.length()];
+        result = line.split(" ");
+        System.out.println(Arrays.toString(result));
+
     }
 
-    public static int getResult (int i, int[] array){
-        if(i == array.length - 1){
+    public static int getResult(int i, int[] array) {
+        if (i == array.length - 1) {
             return array[i];
         }
         return array[i] + getResult(i + 1, array);
     }
 
     // 10
-    public static void lift (int i){
-        if(i == 0){
+    public static void lift(int i) {
+        if (i == 0) {
             return;
         }
         System.out.println("Вы на " + i + " этаже!");
         lift(i - 1);
         System.out.print(i + " ");
+
     }
 
     // 9
-    public static int count (int[] v){
+    public static int count(int[] v) {
         int count = 0;
         for (int j : v) {
             if (j < 0) {
@@ -367,7 +413,7 @@ public class Practice2 {
     }
 
     // 8
-    public static void calculator(){
+    public static void calculator() {
         Scanner scanner = new Scanner(System.in);
         double a = input();
         double b = input();
@@ -378,16 +424,17 @@ public class Practice2 {
                 4 - частное
                 Выберите номер операции:\s""");
         double operation = scanner.nextDouble();
-        if(operation > 0 && operation < 5) System.out.println("Результат: " + result(operation, a,b));
+        if (operation > 0 && operation < 5) System.out.println("Результат: " + result(operation, a, b));
         else {
             System.out.println("Операции не существует!");
         }
 
     }
-    public static double input(){
+
+    public static double input() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число: ");
-        if(scanner.hasNextDouble()){
+        if (scanner.hasNextDouble()) {
             return scanner.nextDouble();
         } else {
             System.out.println("Ошибка при вводе. Повторите ввод!");
@@ -395,8 +442,8 @@ public class Practice2 {
         }
     }
 
-    public static double result(double operation, double a, double b){
-        return switch ((int) operation){
+    public static double result(double operation, double a, double b) {
+        return switch ((int) operation) {
             case 1 -> a + b;
             case 2 -> a - b;
             case 3 -> a * b;
@@ -405,26 +452,25 @@ public class Practice2 {
     }
 
 
-
     // 7
-    public static void operation(int...v){
-        switch (v.length){
+    public static void operation(int... v) {
+        switch (v.length) {
             case 2 -> System.out.println("Сумма двух чисел: " + sum(v[0], v[1]));
             case 3 -> System.out.println("Сумма трех чисел: " + sum(v[0], v[1], v[2]));
             default -> System.out.println("Неверное количество данных!");
         }
     }
 
-    public static int sum(int a, int b){
+    public static int sum(int a, int b) {
         return a + b;
     }
 
-    public static int sum(int a, int b, int c){
+    public static int sum(int a, int b, int c) {
         return a + b;
     }
 
     // 6
-    public static int maxValue(int[] v){
+    public static int maxValue(int[] v) {
         int max = v[0];
         for (int j : v) {
             if (max < j) max = j;
@@ -434,7 +480,7 @@ public class Practice2 {
 
 
     // 5
-    public static void printLine(int start, int end){
+    public static void printLine(int start, int end) {
         for (int i = start; i < end; i++) {
             System.out.print(i + " ");
         }
@@ -442,7 +488,7 @@ public class Practice2 {
     }
 
     // 4
-    public static void numbers (int... v){
+    public static void numbers(int... v) {
         int max = 0;
         for (int j : v) {
             if (j % 13 == 0 && j > 0) {
@@ -458,14 +504,14 @@ public class Practice2 {
 //        System.out.print(a > b ? (a - b) : (a + b));
 //    }
     // 2
-    public static void cube(int count){
+    public static void cube(int count) {
         for (int i = 1; i < count; i++) {
             System.out.println(i + " в кубе = " + (int) Math.pow(i, 3));
         }
     }
 
     // 1
-    public static String average (int...v){
+    public static String average(int... v) {
         int sum = 0;
         ArrayList<Integer> numbers = new ArrayList<>();
         for (int j : v) {
