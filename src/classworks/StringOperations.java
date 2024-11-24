@@ -33,19 +33,19 @@ public class StringOperations {
 //        System.out.println(symbol);
 
         // 5
-        System.out.print("Введите предложение: ");
-        String line = scanner.nextLine().toLowerCase();
-        int[] array = new int['я' - 'а' + 1];
-        for (int i = 0; i < line.length(); i++) {
-            char symbol = line.charAt(i);
-            if(symbol >= 'а' && symbol <= 'я')
-                array[symbol - 'а']++;
-        }
-        for (int i = 0, j = 'а'; i < array.length; i++, j++) {
-            char symbol = (char) j;
-            System.out.print(symbol + " = " + array[i] + " , ");
-        }
-        System.out.println(array.length);
+//        System.out.print("Введите предложение: ");
+//        String line = scanner.nextLine().toLowerCase();
+//        int[] array = new int['я' - 'а' + 1];
+//        for (int i = 0; i < line.length(); i++) {
+//            char symbol = line.charAt(i);
+//            if(symbol >= 'а' && symbol <= 'я')
+//                array[symbol - 'а']++;
+//        }
+//        for (int i = 0, j = 'а'; i < array.length; i++, j++) {
+//            char symbol = (char) j;
+//            System.out.print(symbol + " = " + array[i] + " , ");
+//        }
+//        System.out.println(array.length);
     }
 
 // Exceptions
