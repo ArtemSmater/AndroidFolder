@@ -11,7 +11,7 @@ public class Homework15 {
         for (int i = line.length() - 1; i >= 0; i--) {
             copy += line.charAt(i);
         }
-        if(copy.trim().equals(line.trim())){
+        if(copy.equals(line)){
             System.out.println("Строка палиндром!");
         } else {
             System.out.println("Строка не палиндром!");
