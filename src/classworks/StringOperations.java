@@ -16,37 +16,34 @@ public class StringOperations {
 
 //        String line = "I love programming";
 //        char[] array = line.toCharArray();
-////        for (int i = 0; i < array.length; i++) {
-////            array[i] = line.charAt(i);
-////        }
 
         // StringBuilder
 
-        StringBuilder s = new StringBuilder();
-
-        s.append("Hello world!"); // добавление элементов
-
-        s.insert(s.length(), "   Привет!"); // добавление в определенное место
-
-        s.delete(10, 13); // диапазон значений
-
-        s.deleteCharAt(5); // удалить символ по индексу
-
-        s.replace(5, 10, " Space");
-
-        s.reverse();
-
-        // Practice
-        System.out.println(s);
-
-        StringBuilder builder = createBuilder(5, 2);
-        System.out.println(builder);
-        updateBuilder(builder, '=', "равно");
-        updateBuilder(builder, '+', "плюс");
-        updateBuilder(builder, '*', "умножить");
-        updateBuilder(builder, '/', "разделить");
-        updateBuilder(builder, '-', "минус");
-        System.out.println(builder);
+//        StringBuilder s = new StringBuilder();
+//
+//        s.append("Hello world!"); // добавление элементов
+//
+//        s.insert(s.length(), "   Привет!"); // добавление в определенное место
+//
+//        s.delete(10, 13); // диапазон значений
+//
+//        s.deleteCharAt(5); // удалить символ по индексу
+//
+//        s.replace(5, 10, " Space");
+//
+//        s.reverse();
+//
+//        // Practice
+//        System.out.println(s);
+//
+//        StringBuilder builder = createBuilder(5, 2);
+//        System.out.println(builder);
+//        updateBuilder(builder, '=', "равно");
+//        updateBuilder(builder, '+', "плюс");
+//        updateBuilder(builder, '*', "умножить");
+//        updateBuilder(builder, '/', "разделить");
+//        updateBuilder(builder, '-', "минус");
+//        System.out.println(builder);
 //        for (char ch : array){
 //            System.out.print(ch);
 //        }
@@ -200,6 +197,8 @@ public class StringOperations {
 //        } else {
 //            System.out.println("Такого элемента не существует!");
 //        }
+
+
     }
 
     public static StringBuilder createBuilder(int a, int b) {
