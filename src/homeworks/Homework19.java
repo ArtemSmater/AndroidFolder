@@ -16,8 +16,10 @@ public class Homework19 {
 
         Car car1 = new Car();
         Car car2 = new Car("Пятерка", 2001, "Лада", 76, "dark green", 150000);
+        Car car3 = new Car().newCar();
         car1.getInfo();
         car2.getInfo();
+        car3.getInfo();
     }
 
     public static class Rectangle {
@@ -123,7 +125,7 @@ public class Homework19 {
             setPrice(price);
         }
 
-        
+
         public Car newCar(){
             System.out.print("Год выпуска: ");
             int year = scanner.nextInt();
