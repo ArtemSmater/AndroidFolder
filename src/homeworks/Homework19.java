@@ -16,10 +16,8 @@ public class Homework19 {
 
         Car car1 = new Car();
         Car car2 = new Car("Пятерка", 2001, "Лада", 76, "dark green", 150000);
-        Car car3 = new Car().newCar();
         car1.getInfo();
         car2.getInfo();
-        car3.getInfo();
     }
 
     public static class Rectangle {
@@ -123,25 +121,6 @@ public class Homework19 {
             setPower(power);
             setColor(color);
             setPrice(price);
-        }
-
-        public Car newCar(){
-            System.out.print("Введите модель: ");
-            String model = scanner.nextLine();
-            scanner.nextLine();
-            System.out.print("Год выпуска: ");
-            int year = scanner.nextInt();
-            System.out.print("Введите марку: ");
-            String label = scanner.nextLine();
-            scanner.nextLine();
-            System.out.print("Мощность: ");
-            int power = scanner.nextInt();
-            System.out.print("Цвет автомобиля: ");
-            String color = scanner.nextLine();
-            scanner.nextLine();
-            System.out.print("Цена автомобиля: ");
-            int price = scanner.nextInt();
-            return new Car(model, year, label, power, color, price);
         }
 
         public void getInfo() {
