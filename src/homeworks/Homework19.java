@@ -9,14 +9,17 @@ public class Homework19 {
     public static void main(String[] args) {
         Rectangle rectangle1 = new Rectangle();
         Rectangle rectangle2 = new Rectangle(3, 4);
+        Rectangle rectangle3 = new Rectangle().newRectangle();
         rectangle1.getInfo();
         rectangle2.getInfo();
+        rectangle3.getInfo();
 
         Car car1 = new Car();
         Car car2 = new Car("Пятерка", 2001, "Лада", 76, "dark green", 150000);
+        Car car3 = new Car().newCar();
         car1.getInfo();
         car2.getInfo();
-
+        car3.getInfo();
     }
 
     public static class Rectangle {
@@ -120,6 +123,23 @@ public class Homework19 {
             setPower(power);
             setColor(color);
             setPrice(price);
+        }
+
+        public Car newCar(){
+            System.out.print("Год выпуска: ");
+            int year = scanner.nextInt();
+            System.out.print("Мощность: ");
+            int power = scanner.nextInt();
+            System.out.print("Цена автомобиля: ");
+            int price = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Введите модель: ");
+            String model = scanner.nextLine();
+            System.out.print("Введите марку: ");
+            String label = scanner.nextLine();
+            System.out.print("Цвет автомобиля: ");
+            String color = scanner.nextLine();
+            return new Car(model, year, label, power, color, price);
         }
 
         public void getInfo() {
