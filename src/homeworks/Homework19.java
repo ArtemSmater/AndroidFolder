@@ -123,7 +123,7 @@ public class Homework19 {
             setPrice(price);
         }
 
-<<<<<<< HEAD
+        
         public Car newCar(){
             System.out.print("Год выпуска: ");
             int year = scanner.nextInt();
@@ -141,8 +141,6 @@ public class Homework19 {
             return new Car(model, year, label, power, color, price);
         }
 
-=======
->>>>>>> 0cae845ee2415156f6c3858ce82c400c9632223d
         public void getInfo() {
             System.out.println();
             System.out.printf("""
