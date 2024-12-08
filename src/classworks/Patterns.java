@@ -97,19 +97,19 @@ public class Patterns {
 
         // 5 Практика
         Scanner scanner = new Scanner(System.in);
-//        System.out.print("Введите дату в формате dd-mm-yyyy: ");
-//        String date = scanner.nextLine();
-//        StringBuilder result = new StringBuilder();
-//        Pattern pattern5 = Pattern.compile("[1-3][0-9]-[01][0-9]-[12][09][0-9][0-9]");
-//        Matcher matcher5 = pattern5.matcher(date);
-//        while (matcher5.find()){
-//            result.append(matcher5.group()).append("\n");
-//        }
-//        if(result.isEmpty()){
-//            System.out.println("Неверное выражение!");
-//        } else {
-//            System.out.println(result);
-//        }
+        System.out.print("Введите дату в формате dd-mm-yyyy: ");
+        String date = scanner.nextLine();
+        StringBuilder result = new StringBuilder();
+        Pattern pattern5 = Pattern.compile("(0[1-9]|[12][0-9]|3[01])-(0[0-9]|1[0-2])-(19[0-9][0-9]|20[0-9][0-9])");
+        Matcher matcher5 = pattern5.matcher(date);
+        while (matcher5.find()){
+            result.append(matcher5.group());
+        }
+        if(result.isEmpty()){
+            System.out.println("Неверное выражение!");
+        } else {
+            System.out.print(result);
+        }
 
         // 6 Практика
 //        System.out.print("Придумайте пароль: ");
@@ -138,30 +138,16 @@ public class Patterns {
         // 8 Практика
 //        System.out.print("Введите номер телефона: ");
 //        String number = scanner.nextLine().trim()
-//                .replaceAll("\\+","")
 //                .replaceAll("\\s","")
-//                .replaceAll("-","");
-//
+//                .replaceAll("-","")
+//                .replaceAll("\\(","")
+//                .replaceAll("\\)","");
 //        String result = "";
-//        Pattern pattern = Pattern.compile("^7\\d{10}$");
+//        Pattern pattern = Pattern.compile("^\\+?7\\d{10}$");
 //        Matcher matcher = pattern.matcher(number);
 //        while (matcher.find()){
 //            result = matcher.group();
 //        }
 //        System.out.println(result.isEmpty() ? "Неверно введен номер!" : result);
-
-        System.out.print("Введите номер телефона: ");
-        String number = scanner.nextLine().trim()
-                .replaceAll("\\+","")
-                .replaceAll("\\s","")
-                .replaceAll("-","");
-
-        String result = "";
-        Pattern pattern = Pattern.compile("^7\\d{10}$");
-        Matcher matcher = pattern.matcher(number);
-        while (matcher.find()){
-            result = matcher.group();
-        }
-        System.out.println(result.isEmpty() ? "Неверно введен номер!" : result);
     }
 }

@@ -14,7 +14,7 @@ public class Homework18 {
                 .replaceAll("\\(","")
                 .replaceAll("\\)","");
         String result = "";
-        Pattern pattern = Pattern.compile("^[+-]?7\\d{10}$");
+        Pattern pattern = Pattern.compile("^[+]?7\\d{10}$");
         Matcher matcher = pattern.matcher(number);
         while (matcher.find()){
             result = matcher.group();
