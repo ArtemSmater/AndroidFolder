@@ -7,10 +7,10 @@ import java.util.regex.PatternSyntaxException;
 
 public class Patterns {
     public static void main(String[] args) {
-        String line = "Час в 24-часовом формате от 00 до 23. 2021-06-15Т21:25. " +
-                "Минуты, в диапазоне от 00 до 59. 2021-06-15Т01:09. []";
-        try {
-            String pattern = "[А-Я\\[\\]]";
+//        String line = "Час в 24-часовом формате от 00 до 23. 2021-06-15Т21:25. " +
+//                "Минуты, в диапазоне от 00 до 59. 2021-06-15Т01:09. []";
+//        try {
+//            String pattern = "[А-Я\\[\\]]";
             // 1 [0-9] - поиск всех цифр по одному символу
             // 2 [0-9][0-9][0-9][0-9] - 4 цифры подряд (0 - 9)
             // 3 [12] - поиск либо 1 или 2
@@ -45,12 +45,11 @@ public class Patterns {
                 // 2 вывод совпадений (2)
 //            System.out.println(matcher.group());
 //            }
-        } catch (PatternSyntaxException exception){
-            System.out.println("Неправильное регулярное выражение: "
-                    + exception.getMessage());
-            System.out.println("Описание: " + exception.getDescription());
-            System.out.println("Позиция: " + exception.getIndex());
-        }
+//        } catch (PatternSyntaxException exception){
+//            System.out.println("Неправильное регулярное выражение: "
+//                    + exception.getMessage());
+//            System.out.println("Описание: " + exception.getDescription());
+//            System.out.println("Позиция: " + exception.getIndex());
 
 
         // 1 Пример с цифровыми значениями
@@ -96,20 +95,20 @@ public class Patterns {
 //        }
 
         // 5 Практика
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите дату в формате dd-mm-yyyy: ");
-        String date = scanner.nextLine();
-        StringBuilder result = new StringBuilder();
-        Pattern pattern5 = Pattern.compile("(0[1-9]|[12][0-9]|3[01])-(0[0-9]|1[0-2])-(19[0-9][0-9]|20[0-9][0-9])");
-        Matcher matcher5 = pattern5.matcher(date);
-        while (matcher5.find()){
-            result.append(matcher5.group());
-        }
-        if(result.isEmpty()){
-            System.out.println("Неверное выражение!");
-        } else {
-            System.out.print(result);
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Введите дату в формате dd-mm-yyyy: ");
+//        String date = scanner.nextLine();
+//        StringBuilder result = new StringBuilder();
+//        Pattern pattern5 = Pattern.compile("(0[1-9]|[12][0-9]|3[01])-(0[0-9]|1[0-2])-(19[0-9][0-9]|20[0-9][0-9])");
+//        Matcher matcher5 = pattern5.matcher(date);
+//        while (matcher5.find()){
+//            result.append(matcher5.group());
+//        }
+//        if(result.isEmpty()){
+//            System.out.println("Неверное выражение!");
+//        } else {
+//            System.out.print(result);
+//        }
 
         // 6 Практика
 //        System.out.print("Придумайте пароль: ");
@@ -149,5 +148,7 @@ public class Patterns {
 //            result = matcher.group();
 //        }
 //        System.out.println(result.isEmpty() ? "Неверно введен номер!" : result);
+
+        
     }
 }
