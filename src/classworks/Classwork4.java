@@ -142,9 +142,7 @@ public class Classwork4 {
         }
 
         public static int factorial(int i) {
-            if (i == 1) {
-                return 1;
-            }
+            if (i == 1) return 1;
             return i * factorial(i - 1);
         }
     }
@@ -161,7 +159,7 @@ public class Classwork4 {
 
         public static void triangle(int a, int b){
             counter++;
-            System.out.printf("\nПлощадь треугольника через основание и высоту (%d, %d): %.1f", a, b, (a * b) /2.);
+            System.out.printf("\nПлощадь треугольника через основание и высоту (%d, %d): %.1f", a, b, (a * b) / 2.);
         }
 
         public static void box(int a){
@@ -178,4 +176,6 @@ public class Classwork4 {
             System.out.println("\nКоличество подсчетов: " + counter);
         }
     }
+
+
 }
