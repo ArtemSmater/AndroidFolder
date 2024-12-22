@@ -29,7 +29,7 @@ class Box {
 
     public void showInfo() {
         count++;
-        System.out.println(boxInfo() + "\nОбъем: " + boxVolume());
+        System.out.println(boxInfo() + "\nVolume: " + boxVolume());
     }
 
     public String boxInfo() {
