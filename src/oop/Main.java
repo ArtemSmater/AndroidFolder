@@ -1,5 +1,6 @@
 package oop;
 
+
 public class Main {
     public static void main(String[] args) {
         Human human = new Human("Иванов","Илья",19);
@@ -11,12 +12,20 @@ public class Main {
         Teacher teacher2 = new Teacher("Мешкова", "Ольга","Ивановна", 35,"Спорт", 10, 2);
         Teacher teacher3 = new Teacher("Лякина", "Татьяна","Евгеньевна", 52,"Физика", 27, 4);
 
-        Leaver leaver1 = new Leaver("Борисов", "Петр", 23, "Красный","Сварщик", 2,2);
-        Leaver leaver2 = new Leaver("Жиркова", "Светлана", 22, "Синий","Повар", 4,0);
-        Leaver leaver3 = new Leaver("Стетхэм", "Джейсон", 24, "Красный","Водитель", 1,3);
-        System.out.println(human);
-        System.out.println("\nСтуденты: \n" + student1 + "\n" + student2 + "\n" + student3);
-        System.out.println("\nПреподаватели: \n" + teacher1 + "\n" + teacher2 + "\n" + teacher3);
-        System.out.println("\nВыпускники: \n" + leaver1 + "\n" + leaver2 + "\n" + leaver3);
+        Leaver leaver1 = new Leaver("Борисов", "Петр", 23, "Красный",
+                "Сварщик", 2,2,"Желтый","Говновоз",1,2);
+        Leaver leaver2 = new Leaver("Жиркова", "Светлана", 22, "Синий",
+                "Повар", 4,0,"Оранжевый","Водятел",4,2);
+        Leaver leaver3 = new Leaver("Стетхэм", "Джейсон", 24, "Красный",
+                "Водитель", 1,3, "Черный","Гробовщик",4,2);
+
+        Student student = new Student(human,"Тракторист","ТК-18",20,90);
+        Leaver leaver = new Leaver(student, "Коричнейвый","Говночист",1,3);
+        Specialist specialist = new Specialist(leaver,1);
+
+        System.out.println(student);
+        System.out.println(leaver);
+        System.out.println(specialist);
+
     }
 }

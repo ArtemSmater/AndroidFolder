@@ -12,6 +12,12 @@ public class Human {
         setAge(age);
     }
 
+    public Human (Human human){
+        this.lastName = human.lastName;
+        this.firstName = human.firstName;
+        this.age = human.age;
+    }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -27,5 +33,17 @@ public class Human {
     @Override
     public String toString() {
         return String.format("%-10s%-10sВозраст: %d", lastName, firstName, age);
+    }
+
+    public String getLastName(){
+        return lastName;
+    }
+
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public int getAge(){
+        return age;
     }
 }

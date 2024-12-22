@@ -16,6 +16,22 @@ public class Student extends Human {
         setAttendance(attendance);
     }
 
+    public Student(Student student){
+        super(student);
+        this.speciality = student.speciality;
+        this.group = student.group;
+        this.rating = student.rating;
+        this.attendance = student.attendance;
+    }
+
+    public Student(Human human, String speciality, String group, double rating, double attendance){
+        super(human);
+        setSpeciality(speciality);
+        setGroup(group);
+        setRating(rating);
+        setAttendance(attendance);
+    }
+
     @Override
     public String toString() {
         return super.toString() + String.format(" Специальность: %-9s Группа: %s, Рейтинг: %-4.1f Посещаемость: %.1f",
