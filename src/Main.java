@@ -1,21 +1,34 @@
-import java.sql.Array;
-import java.util.ArrayList;
+
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
-    public static void main(String[] args) {
-        String byteVar = String.format("Переменная типа byte   занимает %s  байт памяти (%s бит памяти), " +
-                "и принимает значения в диапазоне от %s до %s.", Byte.BYTES, Byte.SIZE, Byte.MIN_VALUE, Byte.MAX_VALUE);
-        String shortVar = String.format("Переменная типа short  занимает %s байт памяти (%s бит памяти), " +
-                "и принимает значения в диапазоне от %s до %s.", Short.BYTES, Short.SIZE, Short.MIN_VALUE, Short.MAX_VALUE);
-        String integerVar = String.format("Переменная типа int    занимает %s байт памяти (%s бит памяти), " +
-                "и принимает значения в диапазоне от %s до %s.", Integer.BYTES, Integer.SIZE, Integer.MIN_VALUE, Integer.MAX_VALUE);
-        String longVar = String.format("Переменная типа long   занимает %s байт памяти (%s бит памяти), " +
-                "и принимает значения в диапазоне от %s до %s.", Long.BYTES, Long.SIZE, Long.MIN_VALUE, Long.MAX_VALUE);
-        String floatVar = String.format("Переменная типа float  занимает %s байт памяти (%s бит памяти), " +
-                "и принимает значения в диапазоне от %s до %s.", Float.BYTES, Float.SIZE, Float.MIN_VALUE, Float.MAX_VALUE);
-        String doubleVar = String.format("Переменная типа double занимает %s байт памяти (%s бит памяти), " +
-                "и принимает значения в диапазоне от %s до %s.", Double.BYTES, Double.SIZE, Double.MIN_VALUE, Double.MAX_VALUE);
-        System.out.println(byteVar + "\n" + shortVar + "\n" + integerVar + "\n" + longVar + "\n" + "\n" + floatVar + "\n" + doubleVar);
+    public static void main(String[] args) throws ExceptionString {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Ввведите строку: ");
+        String stringInput = input.nextLine();
+        try {
+            if (verificationLitter(stringInput)) {
+                System.out.println("Исходная строка: " + stringInput + "\nВ строке найдены глассные буквы");
+            } else {
+                throw new ExceptionString("Исходная строка: " + stringInput + "\nОшибка: строка не содержит гласные букв");
+            }
+        }catch (ExceptionString e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static boolean verificationLitter(String stringInput) {
+        String pattern = "[a e i о u y]+|[а о э е и ы у ё ю я]+";
+        Pattern pat = Pattern.compile(pattern);
+        Matcher mat = pat.matcher(stringInput.toLowerCase());
+        return mat.find();
+    }
+}
+
+class ExceptionString extends Exception {
+    public ExceptionString(String message) {
+        super(message);
     }
 }
