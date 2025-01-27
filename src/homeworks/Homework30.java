@@ -1,4 +1,5 @@
-package homeworks.homework27;
+package homeworks;
+
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -56,6 +57,6 @@ class RainbowColors {
 
     @Override
     public String toString() {
-        return String.format("Number = %d Color = %-10s Index = ", number, color);
+        return String.format("Number = %d Color = %-9s Index =", number, color);
     }
 }
