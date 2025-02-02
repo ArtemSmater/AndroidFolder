@@ -10,8 +10,7 @@ public class Classwork9 {
         System.out.println("Исходная строка: " + lineIn);
         String lineUp = getString(String::toUpperCase, lineIn);
         System.out.println("Верхний регистр: " + lineUp);
-
-         StringActions reverse = (StringActions) -> {
+        StringActions reverse = (StringActions) -> {
             StringBuilder result = new StringBuilder();
             for (int i = StringActions.length() - 1; i >= 0; i--) {
                 result.append(StringActions.charAt(i));
