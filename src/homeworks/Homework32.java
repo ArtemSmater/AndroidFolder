@@ -22,15 +22,12 @@ public class Homework32 {
         }
         int counter = 1;
         for (Map.Entry<String, Color> value : hashMap.entrySet()) {
-            String key = value.getKey();
-            String color = value.getValue().toString().toUpperCase();
-            System.out.printf("%d) %s: %s\n", counter++, key, color);
+            System.out.printf("%d) %s: %s\n", counter++, value.getKey(), value.getValue().toString().toUpperCase());
         }
     }
 }
 
 record Color(String name) {
-
     @Override
     public String toString() {
         return name;
